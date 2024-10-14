@@ -1,31 +1,25 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import { Button } from '@/components/ui/button';
 
-function App() {
-    const [count, setCount] = useState(0);
-
+export default function App() {
     return (
-        <>
-            <div>
-                <a href='https://vitejs.dev' target='_blank'>
-                    <img src={viteLogo} className='logo' alt='Vite logo' />
-                </a>
-                <a href='https://react.dev' target='_blank'>
-                    <img src={reactLogo} className='logo react' alt='React logo' />
-                </a>
+        <section className='w-full px-0 py-12 md:py-24 lg:py-32 xl:py-48'>
+            <div className='container px-4 md:px-6'>
+                <div className='flex flex-col items-center space-y-4 text-center'>
+                    <div className='space-y-2'>
+                        <h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none'>
+                            Welcome to Finn
+                        </h1>
+                        <p className='mx-auto max-w-[700px] text-gray-500 dark:text-gray-400 md:text-xl'>
+                            Track your finances, manage your expenses, and reach your financial
+                            goals.
+                        </p>
+                    </div>
+                    <div className='space-x-4'>
+                        <Button>Get Started</Button>
+                        <Button variant='outline'>Learn More</Button>
+                    </div>
+                </div>
             </div>
-            <h1>Vite + React</h1>
-            <div className='card'>
-                <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
-        </>
+        </section>
     );
 }
-
-export default App;
