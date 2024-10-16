@@ -14,10 +14,10 @@ export default function Landing() {
                         </p>
                     </div>
                     <div className='space-x-4'>
-                        <Button>
+                        <Button asChild>
                             <a href='/login'>Get Started</a>
                         </Button>
-                        <Button variant='outline'>
+                        <Button variant='outline' asChild>
                             <a href='/about'>Learn More</a>
                         </Button>
                     </div>

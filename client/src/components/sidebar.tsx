@@ -35,9 +35,11 @@ export default function Sidebar({
                                           index == loggedInNavbarContent.length - 1
                                               ? 'outline'
                                               : 'link'
-                                      }>
-                                      <div>{content.sideIcon}</div>
-                                      <a href={content.href}>{content.mainName}</a>
+                                      }
+                                      asChild>
+                                      <a className='flex items-center gap-2' href={content.href}>
+                                          {content.sideIcon} {content.mainName}
+                                      </a>
                                   </Button>
                               ))
                             : navbarContent.map((content, index) => (
@@ -46,9 +48,11 @@ export default function Sidebar({
                                       className='flex w-fit gap-2 py-2 text-lg font-semibold'
                                       variant={
                                           index == navbarContent.length - 1 ? 'outline' : 'link'
-                                      }>
-                                      <div>{content.sideIcon}</div>
-                                      <a href={content.href}>{content.mainName}</a>
+                                      }
+                                      asChild>
+                                      <a className='flex items-center gap-2' href={content.href}>
+                                          {content.sideIcon} {content.mainName}
+                                      </a>
                                   </Button>
                               ))}
                     </div>

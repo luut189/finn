@@ -7,10 +7,10 @@ export default function Footer() {
                 © 2024 Finn. All rights reserved.
             </p>
             <nav className='flex gap-4 sm:ml-auto sm:gap-6'>
-                <Button className='text-xs' variant={'link'}>
+                <Button className='text-xs' variant={'link'} asChild>
                     <a href='#'>Terms of Service</a>
                 </Button>
-                <Button className='text-xs' variant={'link'}>
+                <Button className='text-xs' variant={'link'} asChild>
                     <a href='#'>Privacy</a>
                 </Button>
             </nav>

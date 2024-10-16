@@ -37,6 +37,7 @@ const loggedInNavbarContent: INavbarContent[] = [
     },
     {
         mainName: 'Log out',
+        href: '/logout',
         sideIcon: <LogOut />,
     },
 ];
@@ -81,14 +82,16 @@ export default function Navbar({ isLoggedIn }: INavBarProp) {
                                   key={index}
                                   variant={
                                       index == loggedInNavbarContent.length - 1 ? 'outline' : 'link'
-                                  }>
+                                  }
+                                  asChild>
                                   <a href={content.href}>{content.mainName}</a>
                               </Button>
                           ))
                         : navbarContent.map((content, index) => (
                               <Button
                                   key={index}
-                                  variant={index == navbarContent.length - 1 ? 'outline' : 'link'}>
+                                  variant={index == navbarContent.length - 1 ? 'outline' : 'link'}
+                                  asChild>
                                   <a href={content.href}>{content.mainName}</a>
                               </Button>
                           ))}
