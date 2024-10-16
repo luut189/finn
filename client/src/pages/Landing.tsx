@@ -14,8 +14,12 @@ export default function Landing() {
                         </p>
                     </div>
                     <div className='space-x-4'>
-                        <Button>Get Started</Button>
-                        <Button variant='outline'>Learn More</Button>
+                        <Button>
+                            <a href='/login'>Get Started</a>
+                        </Button>
+                        <Button variant='outline'>
+                            <a href='/about'>Learn More</a>
+                        </Button>
                     </div>
                 </div>
             </div>

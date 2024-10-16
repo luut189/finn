@@ -27,12 +27,12 @@ const loggedInNavbarContent: INavbarContent[] = [
     },
     {
         mainName: 'Setting',
-        href: '/',
+        href: '/setting',
         sideIcon: <Settings />,
     },
     {
         mainName: 'About',
-        href: '/',
+        href: '/about',
         sideIcon: <CircleAlert />,
     },
     {
@@ -43,8 +43,13 @@ const loggedInNavbarContent: INavbarContent[] = [
 
 const navbarContent: INavbarContent[] = [
     {
-        mainName: 'About',
+        mainName: 'Home',
         href: '/',
+        sideIcon: <House />,
+    },
+    {
+        mainName: 'About',
+        href: '/about',
         sideIcon: <CircleAlert />,
     },
     {
@@ -63,7 +68,10 @@ export default function Navbar({ isLoggedIn }: INavBarProp) {
                 navbarContent={navbarContent}
             />
             <div className='hidden h-14 items-center px-4 sm:hidden md:flex lg:flex lg:px-6'>
-                <p className='text-xl font-medium'>Finn</p>
+                <div className='flex text-xl font-medium gap-2'>
+                    <img src='/favicon.svg' alt='' />
+                    <div className='flex items-center'>Finn</div>
+                </div>
                 <nav className='ml-auto flex gap-4 sm:gap-6'>
                     {isLoggedIn
                         ? loggedInNavbarContent.map((content, index) => (
