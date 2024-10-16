@@ -1,4 +1,4 @@
-import { CircleAlert, House, LayoutDashboard, LogIn, LogOut, Settings } from 'lucide-react';
+import { CircleAlert, Coins, House, LayoutDashboard, LogIn, LogOut, Settings } from 'lucide-react';
 import { Button } from './ui/button';
 import { ReactNode } from 'react';
 import Sidebar from './sidebar';
@@ -68,9 +68,11 @@ export default function Navbar({ isLoggedIn }: INavBarProp) {
                 navbarContent={navbarContent}
             />
             <div className='hidden h-14 items-center px-4 sm:hidden md:flex lg:flex lg:px-6'>
-                <div className='flex gap-2 text-xl font-medium'>
-                    <img src='/favicon.svg' alt='' />
-                    <div className='flex items-center'>Finn</div>
+                <div className='flex text-xl font-medium'>
+                    <div className='flex items-center gap-2'>
+                        <Coins />
+                        Finn
+                    </div>
                 </div>
                 <nav className='ml-auto flex gap-4 sm:gap-6'>
                     {isLoggedIn
