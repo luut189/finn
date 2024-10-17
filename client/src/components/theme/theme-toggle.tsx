@@ -14,8 +14,9 @@ export function ThemeToggle() {
                 isDark = !isDark;
                 setTheme(isDark ? 'dark' : 'light');
             }}>
-            <div className='flex h-5 w-5 items-center transition-all'>
-                {isDark ? <Sun /> : <Moon />}
+            <div className='flex'>
+                <Sun className='rotate-0 scale-0 transition-all dark:rotate-90 dark:scale-100' />
+                <Moon className='absolute rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
             </div>
         </Button>
     );
