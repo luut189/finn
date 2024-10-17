@@ -1,12 +1,12 @@
-import Landing from '@/pages/Landing';
-import Dashboard from '@/pages/Dashboard';
-import PageNotFound from '@/pages/PageNotFound';
-import LoginPage from '@/pages/LoginPage';
-
-import { Routes, Route } from 'react-router-dom';
-import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import Navbar from '@/components/navbar';
+import Dashboard from '@/pages/Dashboard';
+import Landing from '@/pages/Landing';
+import LoginPage from '@/pages/LoginPage';
+import PageNotFound from '@/pages/PageNotFound';
+
 import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 export default function App() {
     // mockup login state

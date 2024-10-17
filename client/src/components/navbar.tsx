@@ -1,6 +1,7 @@
 import Sidebar from '@/components/sidebar';
 import { ThemeToggle } from '@/components/theme/theme-toggle';
 import { Button } from '@/components/ui/button';
+
 import { CircleAlert, Coins, House, LayoutDashboard, LogIn, LogOut, Settings } from 'lucide-react';
 import { ReactNode } from 'react';
 

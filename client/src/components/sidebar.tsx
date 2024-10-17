@@ -1,8 +1,9 @@
+import { INavbarContent } from '@/components/navbar';
+import { ThemeToggle } from '@/components/theme/theme-toggle';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+
 import { MenuIcon } from 'lucide-react';
-import { Button } from './ui/button';
-import { Sheet, SheetTrigger, SheetContent } from './ui/sheet';
-import { INavbarContent } from './navbar';
-import { ThemeToggle } from './theme/theme-toggle';
 
 export default function Sidebar({
     isLoggedIn,
