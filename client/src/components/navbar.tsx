@@ -1,7 +1,8 @@
+import Sidebar from '@/components/sidebar';
+import { ThemeToggle } from '@/components/theme/theme-toggle';
+import { Button } from '@/components/ui/button';
 import { CircleAlert, Coins, House, LayoutDashboard, LogIn, LogOut, Settings } from 'lucide-react';
-import { Button } from './ui/button';
 import { ReactNode } from 'react';
-import Sidebar from './sidebar';
 
 export interface INavbarContent {
     mainName: string;
@@ -68,7 +69,7 @@ export default function Navbar({ isLoggedIn }: INavBarProp) {
                 loggedInNavbarContent={loggedInNavbarContent}
                 navbarContent={navbarContent}
             />
-            <div className='hidden h-14 items-center px-4 sm:hidden md:flex lg:flex lg:px-6'>
+            <div className='hidden h-20 items-center px-4 sm:hidden md:flex lg:flex lg:px-6'>
                 <div className='flex text-xl font-medium'>
                     <div className='flex items-center gap-2'>
                         <Coins />
@@ -95,6 +96,7 @@ export default function Navbar({ isLoggedIn }: INavBarProp) {
                                   <a href={content.href}>{content.mainName}</a>
                               </Button>
                           ))}
+                    <ThemeToggle />
                 </nav>
             </div>
         </header>

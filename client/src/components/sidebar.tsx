@@ -2,6 +2,7 @@ import { MenuIcon } from 'lucide-react';
 import { Button } from './ui/button';
 import { Sheet, SheetTrigger, SheetContent } from './ui/sheet';
 import { INavbarContent } from './navbar';
+import { ThemeToggle } from './theme/theme-toggle';
 
 export default function Sidebar({
     isLoggedIn,
@@ -30,34 +31,39 @@ export default function Sidebar({
                             ? loggedInNavbarContent.map((content, index) => (
                                   <Button
                                       key={index}
-                                      className='flex w-fit gap-2 py-2 text-lg font-semibold'
+                                      className='text-md flex w-fit gap-2 py-2'
                                       variant={
                                           index == loggedInNavbarContent.length - 1
                                               ? 'outline'
                                               : 'link'
                                       }
                                       asChild>
-                                      <a className='flex items-center gap-2' href={content.href}>
-                                          {content.sideIcon} {content.mainName}
+                                      <a href={content.href}>
+                                          {content.sideIcon}
+                                          {content.mainName}
                                       </a>
                                   </Button>
                               ))
                             : navbarContent.map((content, index) => (
                                   <Button
                                       key={index}
-                                      className='flex w-fit gap-2 py-2 text-lg font-semibold'
+                                      className='text-md flex w-fit gap-2 py-2'
                                       variant={
                                           index == navbarContent.length - 1 ? 'outline' : 'link'
                                       }
                                       asChild>
-                                      <a className='flex items-center gap-2' href={content.href}>
-                                          {content.sideIcon} {content.mainName}
+                                      <a href={content.href}>
+                                          {content.sideIcon}
+                                          {content.mainName}
                                       </a>
                                   </Button>
                               ))}
                     </div>
                 </SheetContent>
             </Sheet>
+            <div className='ml-auto flex gap-4 sm:gap-6'>
+                <ThemeToggle />
+            </div>
         </div>
     );
 }
