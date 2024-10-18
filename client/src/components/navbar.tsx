@@ -1,3 +1,4 @@
+import { ILoginProp } from '@/common/types';
 import Sidebar from '@/components/sidebar';
 import { ThemeToggle } from '@/components/theme/theme-toggle';
 import { Button } from '@/components/ui/button';
@@ -10,10 +11,6 @@ export interface INavbarContent {
     sideIcon: ReactNode;
     href?: string;
     function?: () => void;
-}
-
-interface INavBarProp {
-    isLoggedIn: boolean;
 }
 
 const loggedInNavbarContent: INavbarContent[] = [
@@ -62,7 +59,7 @@ const navbarContent: INavbarContent[] = [
     },
 ];
 
-export default function Navbar({ isLoggedIn }: INavBarProp) {
+export default function Navbar({ isLoggedIn }: ILoginProp) {
     return (
         <header>
             <Sidebar

@@ -1,6 +1,7 @@
+import { ILoginProp } from '@/common/types';
 import { Button } from '@/components/ui/button';
 
-export default function Landing() {
+export default function Landing({ isLoggedIn }: ILoginProp) {
     return (
         <section className='flex min-h-screen w-full items-center justify-center px-0'>
             <div className='container px-4 md:px-6'>
@@ -14,12 +15,20 @@ export default function Landing() {
                         </p>
                     </div>
                     <div className='space-x-4'>
-                        <Button asChild>
-                            <a href='/login'>Get Started</a>
-                        </Button>
-                        <Button variant='outline' asChild>
-                            <a href='/about'>Learn More</a>
-                        </Button>
+                        {isLoggedIn ? (
+                            <Button asChild>
+                                <a href='/dashboard'>Go to your Dashboard</a>
+                            </Button>
+                        ) : (
+                            <>
+                                <Button asChild>
+                                    <a href='/login'>Get Started</a>
+                                </Button>
+                                <Button variant='outline' asChild>
+                                    <a href='/about'>Learn More</a>
+                                </Button>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

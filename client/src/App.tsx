@@ -10,13 +10,13 @@ import { Route, Routes } from 'react-router-dom';
 
 export default function App() {
     // mockup login state
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
 
     return (
         <>
             <Navbar isLoggedIn={isLoggedIn} />
             <Routes>
-                <Route path='/' element={<Landing />} />
+                <Route path='/' element={<Landing isLoggedIn={isLoggedIn} />} />
                 <Route path='dashboard' element={<Dashboard />} />
                 <Route path='login' element={<LoginPage />} />
                 <Route path='*' element={<PageNotFound />} />
