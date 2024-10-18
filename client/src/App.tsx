@@ -14,25 +14,10 @@ export default function App() {
 
     return (
         <>
+            <Navbar isLoggedIn={isLoggedIn} />
             <Routes>
-                <Route
-                    path='/'
-                    element={
-                        <>
-                            <Navbar isLoggedIn={isLoggedIn} />
-                            <Landing />
-                        </>
-                    }
-                />
-                <Route
-                    path='dashboard'
-                    element={
-                        <>
-                            <Navbar isLoggedIn={isLoggedIn} />
-                            <Dashboard />
-                        </>
-                    }
-                />
+                <Route path='/' element={<Landing />} />
+                <Route path='dashboard' element={<Dashboard />} />
                 <Route path='login' element={<LoginPage />} />
                 <Route path='*' element={<PageNotFound />} />
             </Routes>
