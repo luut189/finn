@@ -13,7 +13,7 @@ export default function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(true);
 
     return (
-        <>
+        <div className='flex flex-col gap-2'>
             <Navbar isLoggedIn={isLoggedIn} />
             <Routes>
                 <Route path='/' element={<Landing isLoggedIn={isLoggedIn} />} />
@@ -22,6 +22,6 @@ export default function App() {
                 <Route path='*' element={<PageNotFound />} />
             </Routes>
             <Footer />
-        </>
+        </div>
     );
 }
